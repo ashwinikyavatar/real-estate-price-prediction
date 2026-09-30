@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surprise Housing | Property Price Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Surprise Housing</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+<a href="#prediction">Prediction</a>
+<a href="#insights">Insights</a>
+<a href="#models">Models</a>
+<a href="#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tag">AI-POWERED REAL ESTATE ANALYTICS</p>
+
+            <h1>
+                Predict Property Value
+                <span>with Data Science</span>
+            </h1>
+
+            <p class="hero-text">
+                Make smarter real estate investment decisions using
+                machine learning-based property price prediction.
+            </p>
+
+            <a href="#prediction" class="main-button">
+                Predict Property Price →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Prediction Section -->
+    <section id="prediction" class="prediction-section">
+
+        <div class="section-heading">
+            <p class="small-title">PROPERTY PREDICTION</p>
+
+            <h2>Estimate Your Property Value</h2>
+
+            <p>
+                Enter the property details below to estimate its market value.
+            </p>
+        </div>
+
+
+        <div class="prediction-card">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Living Area (sq ft)</label>
+                    <input type="number" id="livingArea"
+                           placeholder="Example: 2000">
+                </div>
+
+
+                <div class="input-group">
+                    <label>Bedrooms</label>
+                    <input type="number" id="bedrooms"
+                           placeholder="Example: 3">
+                </div>
+
+
+                <div class="input-group">
+                    <label>Bathrooms</label>
+                    <input type="number" id="bathrooms"
+                           placeholder="Example: 2">
+                </div>
+
+
+                <div class="input-group">
+                    <label>Year Built</label>
+                    <input type="number" id="yearBuilt"
+                           placeholder="Example: 2010">
+                </div>
+
+
+                <div class="input-group">
+                    <label>Garage Capacity</label>
+                    <input type="number" id="garage"
+                           placeholder="Example: 2">
+                </div>
+
+
+                <div class="input-group">
+                    <label>Overall Quality</label>
+
+                    <select id="quality">
+
+                        <option value="">Select Quality</option>
+
+                        <option value="5">Average</option>
+
+                        <option value="6">Good</option>
+
+                        <option value="7">Very Good</option>
+
+                        <option value="8">Excellent</option>
+
+                        <option value="9">Premium</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button class="predict-button" onclick="predictPrice()">
+                🔮 Predict House Price
+            </button>
+
+
+            <!-- Prediction Result -->
+
+            <div id="result" class="result">
+
+                <p>Estimated Property Value</p>
+
+                <h2 id="price">$0</h2>
+
+                <p id="message">
+                    Enter property details to get an estimate.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Insights Section -->
+
+    <section id="insights" class="insights-section">
+
+        <div class="section-heading">
+
+            <p class="small-title">DATA INSIGHTS</p>
+
+            <h2>What Influences Property Prices?</h2>
+
+            <p>
+                Machine learning helps identify the characteristics
+                that have the greatest influence on property value.
+            </p>
+
+        </div>
+
+
+        <div class="insight-grid">
+
+            <div class="insight-card">
+
+                <div class="icon">🏠</div>
+
+                <h3>Living Area</h3>
+
+                <p>
+                    Larger living spaces can contribute significantly
+                    to the value of a property.
+                </p>
+
+            </div>
+
+
+            <div class="insight-card">
+
+                <div class="icon">⭐</div>
+
+                <h3>Overall Quality</h3>
+
+                <p>
+                    Property quality and condition can strongly
+                    influence its selling price.
+                </p>
+
+            </div>
+
+
+            <div class="insight-card">
+
+                <div class="icon">📅</div>
+
+                <h3>Property Age</h3>
+
+                <p>
+                    The age and construction characteristics of a
+                    property can affect its market value.
+                </p>
+
+            </div>
+
+
+            <div class="insight-card">
+
+                <div class="icon">🚗</div>
+
+                <h3>Garage Capacity</h3>
+
+                <p>
+                    Additional facilities such as garages can
+                    contribute to property value.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+     <!-- Model Performance Section -->
+
+<section id="models" class="models-section">
+
+    <div class="section-heading">
+
+        <p class="small-title">MACHINE LEARNING MODELS</p>
+
+        <h2>Model Performance</h2>
+
+        <p>
+            Different machine learning algorithms are evaluated
+            using standard regression metrics to identify the
+            most suitable model for house price prediction.
+        </p>
+
+    </div>
+
+
+    <div class="model-table-container">
+
+        <table class="model-table">
+
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>R² Score</th>
+                    <th>RMSE</th>
+                    <th>MSE</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Linear Regression</td>
+                    <td>0.774</td>
+                    <td>41325.44</td>
+                    <td>1707791710.11</td>
+                </tr>
+
+                <tr>
+                    <td>Ridge Regression</td>
+                    <td>0.7773</td>
+                    <td>41326.10</td>
+                    <td>1707846333.37</td>
+                </tr>
+
+                <tr>
+                    <td>Lasso Regression</td>
+                    <td>0.7774</td>
+                    <td>41325.44</td>
+                    <td>1707791795.09</td>
+                </tr>
+
+                <tr>
+                    <td>Random Forest</td>
+                    <td>0.8875</td>
+                    <td>30657.82</td>
+                    <td>939901810.71</td>
+                </tr>
+
+                <tr>
+                    <td>Gradient Boosting</td>
+                    <td>0.8774</td>
+                    <td>30661.92</td>
+                    <td>940153522.02</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+    <section id="about" class="about-section">
+
+        <div class="about-content">
+
+            <p class="small-title">ABOUT THE PROJECT</p>
+
+            <h2>Enhancing Real Estate Investment Decisions</h2>
+
+            <p>
+                This project uses data science and machine learning
+                techniques to predict residential property prices.
+                The objective is to help Surprise Housing identify
+                potential investment opportunities and understand
+                the factors that influence house prices.
+            </p>
+
+        </div>
+
+
+        <div class="technology-box">
+
+            <h3>Technology Stack</h3>
+
+            <div class="technology-list">
+
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>Machine Learning</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 Surprise Housing | Real Estate Price Prediction
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
