@@ -32,7 +32,7 @@ function predictPrice() {
 
         return;
     }
-    fetch("https://real-estate-price-prediction-5o5x.onrender.com", {
+    fetch("https://real-estate-price-prediction-505x.onrender.com/predict", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
