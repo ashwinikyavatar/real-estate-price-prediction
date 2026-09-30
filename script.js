@@ -94,3 +94,8 @@ window.predictPrice = function() {
     });
 
 };
+  
+            
+
+        
+       
