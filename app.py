@@ -5,7 +5,6 @@ import joblib
 
 app = Flask(__name__)
 
-# Allow GitHub Pages to access this API
 CORS(
     app,
     resources={r"/*": {"origins": "*"}},
