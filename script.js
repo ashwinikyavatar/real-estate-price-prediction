@@ -34,7 +34,7 @@ window.predictPrice = function() {
 
 
     // Send data to Flask API
-    fetch("https://real-estate-price-prediction-505x.onrender.com/predict", {
+    fetch("https://real-estate-price-prediction-5o5x.onrender.com/predict", {
 
         method: "POST",
 
